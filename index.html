@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aditya Gill - Portfolio</title>
+  <link rel="stylesheet" href="style.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Aditya Gill</h1>
+    <p>Computer Science Student with Cybersecurity Concentration</p>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="Aditya Gill.pdf">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+        <p>
+          Hello, I’m Adi — a Computer Science student at the University of Delaware,
+          passionate about <strong>cybersecurity, digital forensics, and problem-solving</strong>.
+          I enjoy building projects that challenge me to understand technology at a deeper level,
+          from developing low-level tools like a steganography encoder and decoder to collaborating
+          on team-based research and development projects.
+          I have experience with Python, C, Java, and TypeScript, and I’m always eager to learn new languages and frameworks.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Python, C, Java, TypeScript</li>
+        <li><strong>Web Development:</strong> HTML, CSS, React</li>
+        <li><strong>Cybersecurity & Forensics Tools:</strong> Kali Linux, Autopsy, OSForensics, AlternateStreamView, ADSManager, Nessus </li>
+        <li><strong>Software & Development Tools:</strong> GitHub, Visual Studio Code</li>
+        <li><strong>Virtualization & Cloud:</strong> VMware, Google Cloud (basic experience)</li>
+      </ul>
+    </section>
+    
+    <!-- Fun Facts Section -->
+    <section id="fun-facts">
+      <h2>Fun Facts</h2>
+      <div class="fun-facts-container">
+        <ul>
+          <li>I was born and raised in Michigan.</li>
+          <li>I enjoy playing video games and working out in my free time.</li>
+          <li>My favorite programming language is Python.</li>
+          <li>I built my own custom PC from scratch.</li>
+          <li>I own a Harley Sportster 883 and often ride it during the summer.</li>
+          <li>If I weren’t studying CS, I’d probably be a Criminal Forensic Analyst.</li>
+        </ul>
+        <!-- Image -->
+         <img src="images/me.png" alt="Profile picture" class="profile-pic">
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects">
+      <h2>Featured Projects</h2>
+      <div class="project-slider">
+        <div class="project active">
+          <h3>Secure Login</h3>
+          <p>A simple and secure Python-based login system with password strength validation, user management, and audit logging.</p>
+          <a href="projects.html">See more projects →</a>
+        </div>
+        <div class="project">
+          <h3>Maze Generator</h3>
+          <p>A Java-based maze generator and solver that uses depth-first search (DFS) to create and visualize mazes.</p>
+          <a href="projects.html">See more projects →</a>
+        </div>
+        <div class="project">
+          <h3>Steganography Tool</h3>
+          <p>A Python GUI application that hides and reveals secret messages inside PNG images using LSB (Least Significant Bit) steganography.</p>
+          <a href="projects.html">See more projects →</a>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+      </div>
+    </section>
+
+    <script>
+      const projects = document.querySelectorAll('.project');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let current = 0;
+      let autoSlideInterval;
+
+      function showProject(index) {
+        projects.forEach((p, i) => {
+          p.classList.remove('active');
+          if (i === index) p.classList.add('active');
+        });
+      }
+
+      function nextProject() {
+        current = (current + 1) % projects.length;
+        showProject(current);
+      }
+
+      function prevProject() {
+        current = (current - 1 + projects.length) % projects.length;
+        showProject(current);
+      }
+
+      function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+          nextProject();
+        }, 6000);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        prevProject();
+        resetAutoSlide();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextProject();
+        resetAutoSlide();
+      });
+
+      resetAutoSlide();
+    </script>
+  </main>
+
+  <footer>
+    <nav class="footer-nav">
+     <a href="mailto:adityagill10@gmail.com">Email</a> |
+     <a href="https://github.com/gilladi">GitHub</a> |
+     <a href="https://www.linkedin.com/in/aditya-gill-2866a2259/?trk=opento_sprofile_goalscard">LinkedIn</a>
+    </nav>
+
+    <p class="copyright">© 2025 Aditya Gill</p>
+  </footer>
+</body>
+</html>

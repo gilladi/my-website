@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aditya Gill - Portfolio</title>
+  <link rel="stylesheet" href="style.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Aditya Gill</h1>
+    <p>Computer Science Student with Cybersecurity Concentration</p>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="Aditya Gill.pdf">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Secure Login System Project Description -->
+    <section class="project-card">
+    <h2>Secure Login System</h2>
+    <p>
+      This project is a Python-based secure login and registration system designed 
+      with strong authentication practices and administrative functionality. 
+      It uses bcrypt hashing for password storage, enforces strong password requirements, 
+      and implements progressive account lockout protection to defend against brute-force attacks. <br>
+      <a href="https://github.com/gilladi/secure-login-system">View on GitHub</a>
+    </p>
+  </section>
+
+  <!-- Secure Login System Project Demo -->
+  <section class="project-card">
+    <h2>Secure Login Demo</h2>
+      <div class="secure-login-system-screenshots">
+        <div class="screenshot-block">
+          <img src="images/secure_register.png" alt="Secure Register prompt" class="login-img">
+          <p class="screenshot-caption">
+            The program launches with a default admin account and displays the main menu. 
+            In this example, the user selects the registration option, creates a unique 
+            username, and provides a strong password that meets security requirements. 
+            The system confirms successful registration.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/secure_login.png" alt="Successful login attempt" class="login-img">
+          <p class="screenshot-caption">
+            The secure login system verifies the user’s credentials. In this example, 
+            the registered user logs in with the correct username and password, and the 
+            system confirms successful authentication.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/secure_admin.png" alt="Successful login" class="login-img">
+          <p class="screenshot-caption">
+            Demonstrates the admin login feature, where the system validates administrator 
+            credentials and grants elevated access upon successful authentication.
+          </p>
+        </div>
+        
+        <div class="screenshot-block">
+          <img src="images/secure_showlogs.png" alt="Admin login" class="login-img">
+          <p class="screenshot-caption">
+            Showcases the audit logging functionality, where every action—such as user registration, 
+            login attempts, and admin activity—is timestamped and stored for accountability 
+            and security monitoring.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/secure_list.png" alt="Admin list" class="login-img">
+          <p class="screenshot-caption">
+            Highlights the admin’s ability to manage accounts directly from the console.
+            Admins can list all registered users, remove accounts by username, and immediately 
+            verify changes—ensuring secure and efficient system oversight.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Maze Generator & Solver Project Description -->
+    <section class="project-card">
+      <h2>Maze Generator & Solver</h2>
+      <p>
+        This project is a Java-based application that creates random mazes 
+        using a depth-first search (DFS) algorithm. Users input their own maze dimensions 
+        and can create a maze manually, or generate one automatically. 
+        The program then solves the maze, clearly displaying the solution path for the user. <br>
+        <a href="https://github.com/gilladi/maze-generator">View on GitHub</a>
+      </p>
+    </section>
+
+    <!-- Maze Generator & Solver Project Demo -->
+    <section class="project-card">
+      <h2>Maze Generator & Solver Demo</h2>
+      <div class="maze-screenshots">
+        <div class="screenshot-block">
+          <img src="images/maze1.png" alt="Maze Generator step 1" class="maze-img">
+            <p class="screenshot-caption">
+              The concsole output introduces the program, lets users define the maze dimensions,
+              and provides options to either enter a custom maze or generate one automatically.
+              Once configured, the maze is displayed on the screen.
+            </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/maze2.png" alt="Maze Generator step 2" class="maze-img">
+          <p class="screenshot-caption">
+            This console output shows the maze solution, with the path from the 
+            start to the finish shown within the maze.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steganography Tool Project Description -->
+    <section class="project-card">
+      <h2>Steganography Tool</h2>
+      <p>
+        A Python-based steganography application with a simple Tkinter GUI that allows users 
+        to hide secret messages inside PNG images and retrieve them later. The tool uses least 
+        significant bit (LSB) encoding to embed data at the pixel level while keeping the image 
+        visually unchanged. <br>
+        <a href="https://github.com/gilladi/steganography">View on GitHub</a>
+      </p>
+    </section>
+
+    <!-- Steganography Tool Project Demo -->
+    <section class="project-card">
+      <h2>Steganography Tool Demo</h2>
+      <div class="steganography-screenshots">
+        <div class="screenshot-block">
+          <img src="images/steg_projeject-setup.png" alt="Steganography Tool Setup" class="steg-img">
+          <p class="screenshot-caption">
+            The setup of the steganography tool, showing the main GUI window where users can choose to 
+            encode or decode messages within PNG images.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_msg.png" alt="Steganography Tool Encoding" class="steg-img">
+          <p class="screenshot-caption">
+            The user inputs a secret message and selects the Encode Message button to encode the message 
+            into a chosen PNG image.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_choose_img.png" alt="Steganography Tool Choose Image" class="steg-img">
+          <p class="screenshot-caption">
+            The user selects the PNG image file that will be used to hide the secret message.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_name_new_img.png" alt="Steganography Tool Save As" class="steg-img">
+          <p class="screenshot-caption">
+            The user specifies the filename for the new PNG image that contains the encoded message.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_confirmation.png" alt="Steganography Tool Success" class="steg-img">
+          <p class="screenshot-caption">
+            A success message confirms that the secret message has been successfully encoded into the 
+            image and the path to the file.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_decode.png" alt="Steganography Tool Decoding" class="steg-img">
+          <p class="screenshot-caption">
+            The user selects the Decode Message button to retrieve a hidden message from a PNG image.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_choose_decode.png" alt="Steganography Tool Choose Decode" class="steg-img">
+          <p class="screenshot-caption">
+            The user selects the PNG image file that contains the hidden message to be decoded.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_decoded_msg.png" alt="Steganography Tool Decoded Message" class="steg-img">
+          <p class="screenshot-caption">
+            The decoded secret message is displayed in a popup window for the user to read.
+          </p>
+        </div>
+
+        <div class="screenshot-block">
+          <img src="images/steg_comparison.png" alt="Steganography Tool Comparison" class="steg-img">
+          <p class="screenshot-caption">
+            A comparison of the original image and the new image with the encoded message, 
+            demonstrating that they appear visually identical.
+          </p>
+        </div>
+
+      </div>
+    </section>
+        
+
+    <section class="project-card">
+      <h2>Crow Indian Virtual Archive & Museum (CIVAM) – Senior Capstone Project (In Progress)</h2>
+      <p>
+        Leading a team in collaboration with the University of Delaware History Department to enhance 
+        the Crow Indian Virtual Archive & Museum, a digital platform preserving the history and culture 
+        of the Crow Indians of Montana. Current efforts focus on researching and designing improved 
+        search, annotation, and usability features for researchers and historians, while also exploring 
+        a migration to Wix to reduce hosting costs and ensure long-term sustainability. <br>
+        <a href="https://civam-mt.org/home" target="_blank">Visit the Current CIVAM Website</a>
+      </p>
+    </section>
+    
+  </main>
+
+  <footer>
+    <nav class="footer-nav">
+     <a href="mailto:adityagill10@gmail.com">Email</a> |
+     <a href="https://github.com/gilladi">GitHub</a> |
+     <a href="https://www.linkedin.com/in/aditya-gill-2866a2259/?trk=opento_sprofile_goalscard">LinkedIn</a>
+    </nav>
+
+    <p class="copyright">© 2025 Aditya Gill</p>
+  </footer>
+</body>
+</html>
